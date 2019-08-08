@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/e30a91579f.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <script>
+function myFunction() {
+	document.getElementById("signup-form").style.display="none";
+	document.getElementById("login-form").style.display="block";
+}
+function yourFunction() {
+	document.getElementById("signup-form").style.display="block";
+	document.getElementById("login-form").style.display="none";
+}
+</script>
+</head>
+<body>
+        <form action="index.html" class="signup-form" id="signup-form">
+          <h1>Create Account</h1>
+          <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"> </i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"> </i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"> </i></a>
+        </div>
+          <div class="txtb">
+            <input type="text" name="" value="">
+            <span data-placeholder="Username"></span>
+          </div>
+          <div class="txtb">
+            <input type="email" name="" value="">
+            <span data-placeholder="Email ID"></span>
+          </div>
+          <div class="txtb">
+            <input type="password" name="" value="">
+            <span data-placeholder="Password"></span>
+          </div>
+          <input type="submit" name="" class="logbtn" value="Sign up">
+          <div class="bottom-text">
+            Already have an account? <a class='sign' href="#" onclick="myFunction()">login</a>
+          </div>
+        </form>
+
+
+
+<form action="index.html" class="login-form" id="login-form" style="display:none";>
+        <h1>Login</h1>
+        <div class="social-container">
+        <a href="#" class="social"><i class="fab fa-facebook-f"> </i></a>
+        <a href="#" class="social"><i class="fab fa-google-plus-g"> </i></a>
+        <a href="#" class="social"><i class="fab fa-linkedin-in"> </i></a>
+      </div>
+        <div class="txtb">
+          <input type="text" name="" value="">
+          <span data-placeholder="Username"></span>
+        </div>
+
+        <div class="txtb">
+          <input type="password" name="" value="">
+          <span data-placeholder="Password"></span>
+        </div>
+        <input type="submit" name="" class="logbtn" value="login">
+        <div class="bottom-text">
+          Don't have an account? <a class='sign' href="#" onclick="yourFunction()">Sign up</a>
+        </div>
+      </form>
+
+<script type="text/javascript">
+$(".txtb input").on("focus",function(){
+  $(this).addClass("focus");
+});
+$(".txtb input").on("blur",function(){
+  if($(this).val()=="")
+  $(this).removeClass("focus");
+});
+</script>
+
+
+
+
+</body>
+</html>
