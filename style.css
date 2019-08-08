@@ -20,9 +20,9 @@ a.sign{
 }
 .login-form{
 
-  width:280px;
+  width:40vh;
   background: #f1f1f1;
-  height: 480px;
+  height: 65vh;
   padding: 80px 40px;
   border-radius: 10px;
   position: absolute;
